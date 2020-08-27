@@ -20,6 +20,10 @@ macro_rules! no_mangle {
         target_os = "unknown",
         not(target_env = "wasi")
     ),
+    all(
+        target_arch = "wasm32",
+        target_os = "veracruz"
+    ),
     all(target_vendor = "fortanix", target_env = "sgx")
 ))]
 no_mangle! {
